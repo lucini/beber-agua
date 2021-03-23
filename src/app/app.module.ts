@@ -1,3 +1,4 @@
+import { RecipienteService } from './page/calculadora-agua/recipiente.service';
 import { LOCALE_ID, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -9,6 +10,7 @@ import {
   NbCardModule,
   NbInputModule,
   NbAlertModule,
+  NbListModule,
 } from '@nebular/theme';
 import { NbEvaIconsModule } from '@nebular/eva-icons';
 import { AppRoutingModule } from './app-routing.module';
@@ -32,6 +34,7 @@ registerLocaleData(localePt, 'pt');
     NbCardModule,
     NbInputModule,
     NbAlertModule,
+    NbListModule,
     AppRoutingModule,
   ],
   providers: [
@@ -39,6 +42,7 @@ registerLocaleData(localePt, 'pt');
       provide: LOCALE_ID,
       useValue: 'pt'
     },
+    RecipienteService,
   ],
   bootstrap: [AppComponent]
 })

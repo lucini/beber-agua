@@ -13,9 +13,12 @@
       <nb-alert *ngIf="peso"
                 status="info">
         <div class="h5 text-center">
-          {{litros | number:'1.2-2':'pt'}} litros de água por dia.
+          {{litros | number:'1.2-2'}} litros de água por dia.
         </div>
       </nb-alert>
+       <nb-list-item *ngFor="let item of recipientes">
+         {{litros / item.litro | number:'1.2-2'}} - {{ item?.nome }} ({{item.mililitro}} ml)
+       </nb-list-item>
     </nb-layout-column>
   </nb-card-body>
   <nb-card-footer>💦💦💦💦💦💦💦💦💦💦💦💦</nb-card-footer>
