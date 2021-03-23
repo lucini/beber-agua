@@ -1,0 +1,22 @@
+<nb-card>
+  <nb-card-header>{{titulo | uppercase}}</nb-card-header>
+  <nb-card-body>
+    <input type="text"
+           [(ngModel)]="peso"
+           nbInput
+           fullWidth
+           fieldSize="giant"
+           shape="semi-round"
+           status="basic"
+           placeholder="Informe o Peso (kg)">
+    <nb-layout-column>
+      <nb-alert *ngIf="peso"
+                status="info">
+        <div class="h5 text-center">
+          {{litros | number:'1.2-2':'pt'}} litros de água por dia.
+        </div>
+      </nb-alert>
+    </nb-layout-column>
+  </nb-card-body>
+  <nb-card-footer>💦💦💦💦💦💦💦💦💦💦💦💦</nb-card-footer>
+</nb-card>
