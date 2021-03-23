@@ -9,17 +9,16 @@
            shape="semi-round"
            status="basic"
            placeholder="Informe o Peso (kg)">
-    <nb-layout-column>
-      <nb-alert *ngIf="peso"
-                status="info">
+    <nb-layout-column *ngIf="peso">
+      <nb-alert status="info">
         <div class="h5 text-center">
           {{litros | number:'1.2-2'}} litros de água por dia.
         </div>
       </nb-alert>
-       <nb-list-item *ngFor="let item of recipientes">
-         {{litros / item.litro | number:'1.2-2'}} - {{ item?.nome }} ({{item.mililitro}} ml)
-       </nb-list-item>
+      <nb-list-item *ngFor="let item of recipientes">
+        💦 {{litros / item.litro | number:'1.2-2'}} - {{ item?.nome }} ({{item.mililitro}} ml)
+      </nb-list-item>
     </nb-layout-column>
   </nb-card-body>
-  <nb-card-footer>💦💦💦💦💦💦💦💦💦💦💦💦</nb-card-footer>
+  <nb-card-footer>💦💦💦💦💦💦💦💦💦💦💦</nb-card-footer>
 </nb-card>
