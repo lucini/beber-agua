@@ -33,6 +33,11 @@ export class CalculadoraAguaComponent implements OnInit {
       .subscribe(val => this.recipientes = val);
   }
 
+  /**
+   * Calcula a quantidade de litros por kg.
+   * @param valor litros por kg
+   * @returns quantidade de litros por kg.
+   */
   private calcularLitros(valor: number): number {
     return valor * PESO_AGUA_POR_KILO;
   }

@@ -11,6 +11,7 @@ import {
   NbInputModule,
   NbAlertModule,
   NbListModule,
+  NbButtonModule,
 } from '@nebular/theme';
 import { NbEvaIconsModule } from '@nebular/eva-icons';
 import { AppRoutingModule } from './app-routing.module';
@@ -18,11 +19,13 @@ import { CalculadoraAguaComponent } from './page/calculadora-agua/calculadora-ag
 import { FormsModule } from '@angular/forms';
 import { registerLocaleData } from '@angular/common';
 import localePt from '@angular/common/locales/pt';
+import { HomeComponent } from './page/home/home.component';
 registerLocaleData(localePt, 'pt');
 @NgModule({
   declarations: [
     AppComponent,
-    CalculadoraAguaComponent
+    CalculadoraAguaComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
@@ -33,6 +36,7 @@ registerLocaleData(localePt, 'pt');
     NbEvaIconsModule,
     NbCardModule,
     NbInputModule,
+    NbButtonModule,
     NbAlertModule,
     NbListModule,
     AppRoutingModule,
