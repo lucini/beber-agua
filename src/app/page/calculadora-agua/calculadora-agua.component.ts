@@ -3,6 +3,9 @@ import { PESO_AGUA_POR_KILO } from './../../constant/agua-kilo';
 import { Component, OnInit } from '@angular/core';
 import { Recepiente } from 'src/app/model/recepiente';
 
+/**
+ * Calculadora de litros de água por peso
+ */
 @Component({
   selector: 'app-calculadora-agua',
   templateUrl: './calculadora-agua.component.html',
@@ -20,6 +23,9 @@ export class CalculadoraAguaComponent implements OnInit {
     }
   }
 
+  /**
+   * @ignore
+   */
   constructor(private recipienteService: RecipienteService) { }
 
   ngOnInit(): void {
@@ -34,12 +40,12 @@ export class CalculadoraAguaComponent implements OnInit {
   }
 
   /**
-   * Calcula a quantidade de litros por kg.
-   * @param valor litros por kg
-   * @returns quantidade de litros por kg.
+   * Calculo de quanto de água devo beber pelo meu peso
+   * @param peso {number} peso da pessoa em kg
+   * @returns quanto de água devo beber
    */
-  private calcularLitros(valor: number): number {
-    return valor * PESO_AGUA_POR_KILO;
+  private calcularLitros(peso: number): number {
+    return peso * PESO_AGUA_POR_KILO;
   }
 
   private calcularMl(valorEmMl: number): number {
